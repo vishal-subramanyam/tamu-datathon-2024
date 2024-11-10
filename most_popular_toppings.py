@@ -48,6 +48,20 @@ for value in toppings_dict.values():
 for value in drizzles_dict.values():
     drizzle_totals.append(value / num_orders * 100)
 
+#most popular toppings
+all_modifiers_total = {**cheese_dict, **meats_dict, **toppings_dict, **drizzles_dict}
+all_modifiers_sorted = {k: v for k, v in sorted(all_modifiers_total.items(), key=lambda item: item[1], reverse=True)}
+print(all_modifiers_sorted)
+categories = list(all_modifiers_sorted.keys())[:10]
+values = list(all_modifiers_sorted.values())[:10]
+plt.figure()
+plt.bar(categories, values)
+plt.xlabel("Modifier")
+plt.ylabel("Number of purchases")
+plt.show()
+
+
+#percent of toppings
 cheese_lbls = ['Cheddar', 'Gouda', 'No Cheese', 'Pepper Jack', 'Mixed', 'Alfredo']
 plt.figure()
 plt.pie(cheese_totals, labels=cheese_lbls, autopct='%1.1f%%')
