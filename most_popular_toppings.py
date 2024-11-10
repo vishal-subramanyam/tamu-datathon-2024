@@ -55,14 +55,14 @@ print(all_modifiers_sorted)
 categories = list(all_modifiers_sorted.keys())[:10]
 values = list(all_modifiers_sorted.values())[:10]
 plt.figure()
-plt.bar(categories, values)
+plt.bar(categories, values, fontsize=6)
 plt.xlabel("Modifier")
 plt.ylabel("Number of purchases")
 plt.show()
 
 
 #percent of toppings
-cheese_lbls = ['Cheddar', 'Gouda', 'No Cheese', 'Pepper Jack', 'Mixed', 'Alfredo']
+cheese_lbls = ['Cheddar', 'Gouda and No Cheese', ' ', 'Pepper Jack', 'Mixed', 'Alfredo']
 plt.figure()
 plt.pie(cheese_totals, labels=cheese_lbls, autopct='%1.1f%%')
 plt.title('Percentage of cheese orders')
