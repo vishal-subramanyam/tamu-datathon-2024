@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('all_data.csv')
+df = pd.read_csv('data/all_data.csv')
 num_sales_per_month = [0] * 7
 
 for i in range(len(df)):

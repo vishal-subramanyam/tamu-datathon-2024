@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import seaborn as sns
-df = pd.read_csv('september_2024.csv')
+df = pd.read_csv('data/september_2024.csv')
 
 result = df.groupby('Order ID').agg(
     date=('Sent Date', 'first'),

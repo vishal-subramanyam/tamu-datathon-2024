@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('all_data.csv')
+df = pd.read_csv('data/all_data.csv')
 num_orders = 0
 
 toppings = set()
